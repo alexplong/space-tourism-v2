@@ -10,16 +10,18 @@
   rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home">
 
-  <header class="primary-header flex flex-ai-c flex-jc-sb">
+  <header class="primary-header flex flex-ai-c">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
 
     </div>
-    <nav class="primary-navigation underline-indicators flex">
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" ><span class="sr-only">Menu</span></button>
+    <nav id="primary-navigation" class="primary-navigation underline-indicators flex" data-visible="false">
       <a aria-selected="true" class="text-white ff-sans-condensed letter-spacing-2 uppercase" href="./index.html"><span>00</span>Home</a>
       <a aria-selected="false" class="text-white ff-sans-condensed letter-spacing-2 uppercase" href="./destination.html"><span>01</span>Destination</a>
       <a aria-selected="false" class="text-white ff-sans-condensed letter-spacing-2 uppercase" href="./crew.html"><span>02</span>Crew</a>
@@ -27,9 +29,9 @@
     </nav>
   </header>
 
-  <div class="grid-container">
+  <div class="grid-container grid-container--home">
       <div>
-        <h1 class="text-light fs-500 ff-sans-condensed letter-spacing-1 uppercase" style="font-weight: 400;">So, you want to travel to
+        <h1 class="text-light fs-400 ff-sans-condensed letter-spacing-1 uppercase" style="font-weight: 400;">So, you want to travel to
         <span class="text-white fs-900 ff-serif letter-spacing-2 block">Space</span>
         </h1>
         <p class="text-light">
